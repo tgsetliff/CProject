@@ -1,0 +1,15 @@
+﻿@model CProject.Models.MaxThreeViewModel
+
+@{
+    ViewBag.Title = "Max of Three";
+}
+
+<h2>MaxThree</h2>
+
+<form action="@Url.Action("MaxThree", "Exercises")" method="post">
+    <label>Input Number:</label><input type="number" name="number1" style="width:200px;" value="@if (@Model != null) { @Model.number1}" /><br />
+    <label>Input Number:</label><input type="number" name="number2" width="5" value="@if(@Model != null) { @Model.number2}" /><br />
+    <label>Input Number:</label><input type="number" name="number3" width="5" value="@if(@Model != null) { @Model.number3}" /><br />
+    <label>Largest:</label><input type="number" name="large" value="@if(@Model != null) { @Model.large}" disabled /><br />
+    <button type="submit">FindLarge</button>
+</form>

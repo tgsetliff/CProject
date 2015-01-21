@@ -1,0 +1,16 @@
+﻿@model CProject.Models.CountAliceViewModel
+
+@{
+    ViewBag.Title = "CountAlice";
+}
+
+<h2>CountAlice</h2>
+
+<form action="@Url.Action("CountAlice", "Exercises")" method="post">
+    <textarea name="text">
+        @if (Model != null)
+        { @Model.text}
+    </textarea><br />
+    <label>Count:</label><input type="number" value="@if(@Model != null) { @Model.appearances}" disabled /><br />
+    <button type="submit">CountAlice</button>
+</form>
