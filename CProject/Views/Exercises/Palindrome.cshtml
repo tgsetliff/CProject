@@ -1,0 +1,13 @@
+﻿@model CProject.Models.PalindromeViewModel
+
+@{
+    ViewBag.Title = "Palindrome";
+}
+
+<h2>Palindrome</h2>
+
+<form action="@Url.Action("Palindrome", "Exercises")" method="post">
+    <label>Input Word:</label><input type="text" autofocus name="text" style="width:100px;" value="@if (@Model != null) { @Model.text}" /><br />
+    <label>Palindrome?:</label><input type="text" name="result" value="@if(@Model != null) { @Model.result}" disabled /><br />
+    <button type="submit">Palindrome</button>
+</form>

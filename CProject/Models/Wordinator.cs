@@ -12,7 +12,7 @@ namespace CProject.Models
 
         public Wordinator(string text) 
         {            
-            this.text = text;
+            this.text = text.ToLower();
             var tempText = text.Replace('\n', ' ');
             tempText = tempText.Replace('.', ' ');
             words = tempText.Split(' ');       
@@ -44,6 +44,18 @@ namespace CProject.Models
                 }
             }
             return appearances;
+        }
+
+        public string findPalindrome()
+        {
+            string palWord;
+            char[] inpalArr = text.ToCharArray();
+            Array.Reverse(inpalArr);
+            palWord = new string(inpalArr);
+            
+            string result = "";
+
+            return result = (palWord == text) ? "True" : "False"; ;
         }
     }
 }

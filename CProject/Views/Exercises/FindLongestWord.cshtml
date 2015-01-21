@@ -7,9 +7,9 @@
 <h2>FindLongestWord</h2>
 
 <form action="@Url.Action("FindLongestWord", "Exercises")" method="post">
-    <textarea name="text" style="height:100px; width:400px">
+    <textarea name="text" autofocus style="height:100px; width:400px">
         @if (Model != null)
-        { @Model.text} 
+        { @Model.text}
     </textarea><br />
     <br>
     <label>Longest Word:</label><input type="text" value="@if(@Model != null) { @Model.longest}" disabled /><br />

@@ -13,7 +13,7 @@ namespace CProject.Models
         public Mathinator(string number)
         {
             this.number = number;
-            numbers = number.Split(' ');
+            numbers = number.Split(',');
         }
 
         public string MaxThree()

@@ -7,7 +7,7 @@
 <h2>CountAlice</h2>
 
 <form action="@Url.Action("CountAlice", "Exercises")" method="post">
-    <textarea name="text" style="height:100px;width:400px">
+    <textarea name="text" autofocus style="height:100px;width:400px">
         @if (Model != null)
         { @Model.text}
     </textarea><br />

@@ -12,6 +12,8 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult Sum()
         {
+            int number1 = 0;
+            int number2 = 0;
             return View();
         }
         
@@ -31,6 +33,9 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult MaxThree()
         {
+            int number = 0;
+            int large = 0;
+
             return View();
         }
 
@@ -51,6 +56,9 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult SumMult()
         {
+            int number = 0;
+            int result = 0;
+
             return View();
         }
 
@@ -71,6 +79,9 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult FindLongestWord()
         {
+            string text = "";
+            string longest = "";
+
             return View();
         }
 
@@ -90,9 +101,11 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult CountAlice()
         {
+            string text = "";
+            int appearances = 0;
+
             return View();
         }
-
 
         [HttpPost]
         public ActionResult CountAlice(string text)
@@ -104,7 +117,28 @@ namespace CProject.Controllers
                 text = text,
                 appearances = wordinator.CountAlice()
             };
+            return View(responseModel);
+        }
 
+        [HttpGet]
+        public ActionResult Palindrome()
+        {
+            string text = "";
+            string result = "";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Palindrome(string text)
+        {
+            var wordinator = new Wordinator(text);
+
+            var responseModel = new PalindromeViewModel
+            {
+                text = text,
+                result = wordinator.findPalindrome()
+            };
             return View(responseModel);
         }
     }
