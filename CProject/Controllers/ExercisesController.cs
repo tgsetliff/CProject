@@ -12,7 +12,6 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult Sum()
         {
-
             return View();
         }
         
@@ -32,21 +31,40 @@ namespace CProject.Controllers
         [HttpGet]
         public ActionResult MaxThree()
         {
-
             return View();
         }
 
         [HttpPost]
-        public ActionResult MaxThree(MaxThreePostModel model)
+        public ActionResult MaxThree(string number)
         {
+            var mathinator = new Mathinator(number);
+
             var responseModel = new MaxThreeViewModel
             {
-                number1 = model.number1,
-                number2 = model.number2,
-                number3 = model.number3
+                number = number,
+                large = mathinator.MaxThree()
             };
 
-            responseModel.FindLarge();
+            return View(responseModel);
+        }
+
+        [HttpGet]
+        public ActionResult SumMult()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SumMult(string number)
+        {
+            var mathinator = new Mathinator(number);
+
+            var responseModel = new SumMultViewModel
+            {
+                number = number,
+                result = mathinator.SumMult()
+            };
+
             return View(responseModel);
         }
 

@@ -1,4 +1,4 @@
-﻿@*@model CProject.Models.SumMultViewModel
+﻿@model CProject.Models.SumMultViewModel
 
 @{
     ViewBag.Title = "Sum and Multiply";
@@ -7,7 +7,7 @@
 <h2>SumMult</h2>
 
 <form action="@Url.Action("SumMult", "Exercises")" method="post">
-    <label>Input Number:</label><input type="number" name="number1" value="@if (@Model != null) { @Model.numbers}" /><br />
+    <label>Input Number:</label><input type="text" name="number" value="@if (@Model != null) { @Model.number}" /><br />
     <label>Results:</label><input type="text" name="result" value="@if(@Model != null) { @Model.result}" disabled /><br />
     <button type="submit">SumMult</button>
-</form>*@
+</form>

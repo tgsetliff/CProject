@@ -26,18 +26,14 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Page 1", "Page1", "Home")</li>
                     <li>@Html.ActionLink("Page 2", "Page2", "Home")</li>
-                    <li>
-                        <a role="menuitem" tabindex="-1" href="@Url.Action("Sum", "Exercises")">Sum</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="@Url.Action("Sum", "Exercises")">Sum</a>
-                            </li>
-                        </ul>
-                        <a role="menuitem" tabindex="-1" href="@Url.Action("MaxThree", "Exercises")">Find Largest</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="@Url.Action("MaxThree", "Exercises")">Find Largest</a>
-                            </li>
+                            <li><a role="menuitem" tabindex="-1" href="@Url.Action("Sum", "Exercises")">Sum</a></li>
+                            <li><a role="menuitem" tabindex="-1" href="@Url.Action("MaxThree", "Exercises")">Find Largest</a></li>
+                            <li><a role="menuitem" tabindex="-1" href="@Url.Action("SumMult", "Exercises")">Sum and Multiply</a></li>
+                            <li><a role="menuitem" tabindex="-1" href="@Url.Action("FindLongestWord", "Exercises")">Find Longest Word</a></li>
+                            <li><a role="menuitem" tabindex="-1" href="@Url.Action("Count Alice", "Exercises")">Count Alice</a></li>
                         </ul>
                     </li>
                 </ul>
