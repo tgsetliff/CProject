@@ -166,6 +166,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CountAliceViewModel.cs" />
+    <Compile Include="Models\CountWordsViewModel.cs" />
+    <Compile Include="Models\filterLongWordsViewModel.cs" />
+    <Compile Include="Models\findFactorialViewModel.cs" />
+    <Compile Include="Models\FizzBuzzViewModel.cs" />
     <Compile Include="Models\LongestWordViewModel.cs" />
     <Compile Include="Models\Mathinator.cs" />
     <Compile Include="Models\MaxThreeViewModel.cs" />
@@ -175,6 +179,7 @@
     <Compile Include="Models\SumViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\WordFrequencyViewModel.cs" />
     <Compile Include="Models\Wordinator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -244,6 +249,11 @@
     <Content Include="Views\Exercises\FindLongestWord.cshtml" />
     <Content Include="Views\Exercises\CountAlice.cshtml" />
     <Content Include="Views\Exercises\Palindrome.cshtml" />
+    <Content Include="Views\Exercises\CountWords.cshtml" />
+    <Content Include="Views\Exercises\WordFrequency.cshtml" />
+    <Content Include="Views\Exercises\filterLongWords.cshtml" />
+    <Content Include="Views\Exercises\findFactorial.cshtml" />
+    <Content Include="Views\Exercises\FizzBuzz.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

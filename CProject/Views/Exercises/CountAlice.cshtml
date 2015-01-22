@@ -11,6 +11,8 @@
         @if (Model != null)
         { @Model.text}
     </textarea><br />
-    <label>Count:</label><input type="number" value="@if(@Model != null) { @Model.appearances}" disabled /><br />
+    <br />
+    <label>Count Equals: </label><input type="number" style="height:25px;width:50px"  value="@if(@Model != null) { @Model.appearances}" disabled /><br />
+    <br />
     <button type="submit">CountAlice</button>
 </form>

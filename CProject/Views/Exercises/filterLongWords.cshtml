@@ -1,0 +1,39 @@
+﻿@model CProject.Models.filterLongWordsViewModel
+
+@{
+    ViewBag.Title = "filterLongWords";
+}
+
+<h2>filterLongWords</h2>
+
+<form action="@Url.Action("filterLongWords", "Exercises")" method="post">
+    <textarea name="text" autofocus style="height:100px; width:400px">
+        @if (Model != null)
+        { @Model.text}
+    </textarea><br />
+    <br>
+    <label>How many characters?</label><input type="number" style="width:50px" name="number" value="@if(@Model != null) { @Model.number}"</input>
+    <br />
+    <button type="submit">Find Long Words</button>
+</form>
+
+@if (Model != null)
+{
+    <table class="table table-responsive table-striped table-hover">
+        <thead>
+            <tr>
+                <td>Long Words</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var element in Model.longWords)
+            {
+                <tr>
+                    <td>@element</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}

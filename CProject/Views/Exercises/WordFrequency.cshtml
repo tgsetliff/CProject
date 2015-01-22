@@ -1,0 +1,39 @@
+﻿@model CProject.Models.WordFrequencyViewModel
+
+@{
+    ViewBag.Title = "WordFrequency";
+}
+
+<h2>WordFrequency</h2>
+
+<form action="@Url.Action("WordFrequency", "Exercises")" method="post">
+    <textarea name="text" autofocus style="height:100px;width:400px">
+        @if (Model != null)
+        { @Model.text}
+    </textarea><br />
+    <button type="submit">WordFrequency</button>
+</form>
+
+@if (Model != null)
+{
+    <table class="table table-responsive table-striped table-hover">
+        <thead>
+            <tr>
+                <td>Word</td>
+                <td>Frequency</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach(var element in Model.frequencies.OrderByDescending(v => v.Value))
+            {
+                <tr>
+                    <td>@element.Key</td>
+                    <td>@element.Value</td>
+                </tr>
+                
+            }
+
+        </tbody>
+    </table>
+}

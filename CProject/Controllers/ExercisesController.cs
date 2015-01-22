@@ -141,5 +141,95 @@ namespace CProject.Controllers
             };
             return View(responseModel);
         }
+
+        [HttpGet]
+        public ActionResult WordFrequency()
+        {
+            string text = "";
+            string frequency = "";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult WordFrequency(string text)
+        {
+            var wordinator = new Wordinator(text);
+
+            var responseModel = new WordFrequencyViewModel
+            {
+                text = text,
+                frequencies = wordinator.WordFrequency()
+            };
+            return View(responseModel);
+        }
+
+        [HttpGet]
+        public ActionResult filterLongWords()
+        {
+            string text = "";
+            int number = 0;
+            string longWords = "";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult filterLongWords(string text, int number)
+        {
+            var wordinator = new Wordinator(text);
+            var responseModel = new filterLongWordsViewModel
+            {
+                text = text,
+                longWords = wordinator.filterLongWords(number)
+            };
+
+            return View(responseModel);
+        }
+
+        [HttpGet]
+        public ActionResult findFactorial()
+        {
+            int number = 0;
+            int result = 0;
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult findFactorial(string number)
+        {
+            var mathinator = new Mathinator(number);
+
+            var responseModel = new findFactorialViewModel
+            {
+                number = number,
+                result = mathinator.findFactorial()
+            };
+
+            return View(responseModel);
+        }
+
+
+        [HttpGet]
+        public ActionResult FizzBuzz()
+        {
+            string nada = "";
+            string output = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FizzBuzz(string nada)
+        {
+            var mathinator = new Mathinator("0");
+            var responseModel = new FizzBuzzViewModel
+            {
+                nada = "",
+                output = mathinator.FizzBuzz()
+            };
+
+            return View(responseModel);
+    }
     }
 }

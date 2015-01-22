@@ -7,8 +7,11 @@
 <h2>Sum</h2>
 
 <form action="@Url.Action("Sum", "Exercises")" method="post">
-    <label>Input Number:</label><input type="number" autofocus name="number1" value="@if (Model != null) { @Model.number1}" /><br/>
-    <label>Input Number:</label><input type="number" name="number2" value="@if(@Model != null) { @Model.number2}"/><br />
-    <label>Sum:</label><input type="number" name="sum" value="@if(@Model != null) { @Model.sum}" disabled /><br/>
+    <label>Input Number: </label><input type="number" autofocus name="number1" value="@if (Model != null) { @Model.number1}" /><br/>
+    <br />
+    <label>Input Number: </label><input type="number" name="number2" value="@if(@Model != null) { @Model.number2}"/><br />
+    <br />
+    <label>Sum: </label><input type="number" name="sum" value="@if(@Model != null) { @Model.sum}" disabled /><br/>
+    <br />
     <button type="submit">GetSum</button>
 </form>

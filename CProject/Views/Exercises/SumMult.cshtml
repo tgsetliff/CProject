@@ -7,7 +7,9 @@
 <h2>SumMult</h2>
 
 <form action="@Url.Action("SumMult", "Exercises")" method="post">
-    <label>Input Numbers:</label><input type="text" autofocus  name="number" value="@if (@Model != null) { @Model.number}" /><br />
-    <label>Results:</label><input type="text" name="result" value="@if(@Model != null) { @Model.result}" disabled /><br />
+    <label>Input Numbers: </label><input type="text" autofocus  name="number" value="@if (@Model != null) { @Model.number}" /><br />
+    <br />
+    <label>Results: </label><input type="text" name="result" value="@if(@Model != null) { @Model.result}" disabled /><br />
+    <br />
     <button type="submit">SumMult</button>
 </form>

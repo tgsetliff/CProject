@@ -1,0 +1,18 @@
+﻿@model CProject.Models.CountWords
+
+@{
+    ViewBag.Title = "CountWords";
+}
+
+<h2>CountWords</h2>
+
+<form action="@Url.Action("CountWords", "Exercises")" method="post">
+    <textarea name="text" autofocus style="height:100px;width:400px">
+        @if (Model != null)
+        { @Model.text}
+    </textarea><br />
+    <br />
+    <label>Count Equals: </label><input type="number" style="height:25px;width:50px" value="@if(@Model != null) { @Model.appearances}" disabled /><br />
+    <br />
+    <button type="submit">CountAlice</button>
+</form>

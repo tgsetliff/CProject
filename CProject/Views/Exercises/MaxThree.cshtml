@@ -7,7 +7,9 @@
 <h2>MaxThree</h2>
 
 <form action="@Url.Action("MaxThree", "Exercises")" method="post">
-    <label>Input Number:</label><input type="text" autofocus name="number" style="width:200px;" value="@if (@Model != null) { @Model.number}" /><br />
+    <label>Input Number: </label><input type="text" autofocus name="number" style="width:200px;" value="@if (@Model != null) { @Model.number}" /><br />
+    <br />
     <label>Largest:</label><input type="number" name="large" value="@if(@Model != null) { @Model.large}" disabled /><br />
+    <br />
     <button type="submit">FindLarge</button>
 </form>
