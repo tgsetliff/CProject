@@ -1,0 +1,14 @@
+﻿@model CProject.Models.ArmstrongNumbersViewModel
+
+@{
+    ViewBag.Title = "ArmstrongNumbers";
+}
+
+<h2>ArmstrongNumbers</h2>
+
+<form action="@Url.Action("ArmstrongNumbers", "Exercises")" method="post">
+    <label>Armstrong Numbers: </label><input type="text" name="result" value="@if(@Model != null) { @Model.output}" disabled /><br />
+    <br />
+    <button type="submit">Get Armstrong Numbers</button><br />
+
+</form>

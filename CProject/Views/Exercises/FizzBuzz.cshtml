@@ -18,17 +18,29 @@
     <table class="table table-responsive table-striped table-hover">
         <thead>
             <tr>
-                <td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
         </thead>
         <tbody>
 
-            @foreach (var element in Model.output)
+            @for(var outerCounter = 0; outerCounter <  10; outerCounter++)
             {               
                 <tr>
-                    <td>@element</td>
+                    @for(var innerCounter = 0; innerCounter < (Model.output.Count / 10) +1; innerCounter++)
+                    {
+                        if ((innerCounter * 10 + outerCounter) < Model.output.Count)
+                        {
+                            <td>@Model.output.ElementAt(innerCounter*10 + outerCounter)</td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    }
                 </tr>
             }
+
+
 
         </tbody>
     </table>

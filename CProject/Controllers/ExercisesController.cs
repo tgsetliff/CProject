@@ -230,6 +230,92 @@ namespace CProject.Controllers
             };
 
             return View(responseModel);
-    }
+        }
+
+        //public ActionResult Factorial()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+
+        //public ActionResult Factorial(int number)
+        //{
+        //    int result = Wordinator.Factorial(number);
+
+        //    return View(result);
+        //}
+
+        [HttpGet]
+        public ActionResult PerfectNumbers()
+        {
+            string number = "0";
+            string result = "";
+            string output = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult PerfectNumbers(string number)
+        {
+            if (number != null && number != "0" && number != "")
+            {
+                var mathinator = new Mathinator(number);
+                var responseModel = new PerfectNumbersViewModel
+                {
+                    number = number,
+                    result = mathinator.PerfectNumber()
+                };
+                return View(responseModel);
+            }
+            else
+            {
+                var mathinator = new Mathinator(number);
+                var responseModel = new PerfectNumbersViewModel
+                {
+                    number = number.ToString(),
+                    result = mathinator.PerfectNumbers()
+                };
+                return View(responseModel);
+            }           
+        }
+
+        [HttpGet]
+        public ActionResult HappyNumbers()
+        {
+            string output = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult HappyNumbers(string nada)
+        {
+            var mathinator = new Mathinator("0");
+            var responseModel = new HappyNumbersViewModel
+            {
+                nada = "",
+                output = mathinator.HappyNumbers()
+            };
+            return View(responseModel);
+        }
+
+        [HttpGet]
+        public ActionResult ArmstrongNumbers()
+        {
+            string output = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ArmstrongNumbers(string nada)
+        {
+            var mathinator = new Mathinator("0");
+            var responseModel = new ArmstrongNumbersViewModel
+            {
+                nada = "",
+                output = mathinator.ArmstrongNumbers()
+            };
+            return View(responseModel);
+        }
     }
 }

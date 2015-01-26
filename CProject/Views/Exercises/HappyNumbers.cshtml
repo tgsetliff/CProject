@@ -1,0 +1,14 @@
+﻿@model CProject.Models.HappyNumbersViewModel
+
+@{
+    ViewBag.Title = "HappyNumbers";
+}
+
+<h2>Happy Numbers</h2>
+
+<form action="@Url.Action("HappyNumbers", "Exercises")" method="post">
+    <label>Happy Numbers: </label><input type="text" name="result" value="@if(@Model != null) { @Model.output}" disabled /><br />
+    <br />
+    <button type="submit">Get Happy Numbers</button><br />
+
+</form>

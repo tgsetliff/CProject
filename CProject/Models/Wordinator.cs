@@ -18,6 +18,11 @@ namespace CProject.Models
             words = tempText.Split(' ').Where(s=> s != "" && s != " ").ToArray();
         }
 
+        public static int Factorial(int n)
+        {
+            return n > 2 ? n * Factorial(n - 1) : 2;
+        }
+
         public string findLongestWord()
         {
             string longestWord = "";

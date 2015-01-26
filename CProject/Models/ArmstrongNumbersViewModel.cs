@@ -5,10 +5,9 @@ using System.Web;
 
 namespace CProject.Models
 {
-    public class findFactorialViewModel
+    public class ArmstrongNumbersViewModel
     {
-        public string number { get; set; }
-        public string result { get; set; }
+        public string nada { get; set; }
         public string output { get; set; }
     }
 }

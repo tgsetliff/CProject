@@ -1,0 +1,15 @@
+﻿@model CProject.Models.PerfectNumbersViewModel
+
+@{
+    ViewBag.Title = "PerfectNumbers";
+}
+
+<h2>Perfect Numbers</h2>
+
+<form action="@Url.Action("PerfectNumbers", "Exercises")" method="post">
+    <label>Input Number: </label><input type="number" autofocus name="number" value="@if (@Model != null) { @Model.number}" /><br />
+    <br />
+    <label>Perfect: </label><input type="text" name="result" value="@if(@Model != null) { @Model.result}" disabled /><br />
+    <button type="submit">Test Perfect</button><br />
+    <button type="submit">Find Perfect</button>
+</form>
