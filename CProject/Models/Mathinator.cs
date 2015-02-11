@@ -127,8 +127,6 @@ namespace CProject.Models
         // PerfectNumbers
         public string PerfectNumbers()
         {   
-            // find perfect numbers between 1 and 1000000
-
             string tempNum = "";
             int num = 0;
             string output = "";
@@ -149,6 +147,7 @@ namespace CProject.Models
             return output;
         }
 
+        // Happy Numbers
         public string HappyNumbers()
         {
             int cnt = 0;
